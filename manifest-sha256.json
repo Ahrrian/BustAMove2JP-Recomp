@@ -1,7 +1,7 @@
 {
   ".gitattributes": {
-    "bytes": 191,
-    "sha256": "d8414160c7b8219c14a14e3b62a02250783c2de11dd7b0d24617685bd6f528b0"
+    "bytes": 179,
+    "sha256": "1d2aa931aee07d3b3680ac17c881dee3153f37d224ebddc94679a6bf2466019b"
   },
   ".github/workflows/publication-check.yml": {
     "bytes": 806,
