@@ -17,7 +17,7 @@ import subprocess
 import sys
 
 EXPECTED_ROOT = {
-    ".gitignore", ".gitattributes", "README.md", "LEIA-ME.txt",
+    ".gitignore", ".gitattributes", "README.md", "README_EN.md", "LEIA-ME.txt",
     "VALIDACAO.txt", "RELEASE_CHECKLIST.md", "framework.json",
     "manifest-sha256.json",
 }

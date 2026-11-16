@@ -16,8 +16,12 @@
     "sha256": "ee6d0189360aa9c93dad9f6e1bf60d9020d16efa3898c78b67e00b91e181c6a7"
   },
   "README.md": {
-    "bytes": 5167,
-    "sha256": "b293155f5ea871034dd9a95affb1518d3ebdc0b10b63f1d9011344fdc9827658"
+    "bytes": 17932,
+    "sha256": "bc601df3ac18cfc0a3348bf8f7572b4098b5a1de55f4f808ab2557e374cb2e94"
+  },
+  "README_EN.md": {
+    "bytes": 16947,
+    "sha256": "40b064a969cc5afed9b0193aec6b0b81ec174959cd65f5a87d78c2ac42d577ad"
   },
   "RELEASE_CHECKLIST.md": {
     "bytes": 2522,
@@ -104,7 +108,7 @@
     "sha256": "bc5bf53db557f3c78246c85ef019c78f454638cf3b471a9e428e40badd8a0b9b"
   },
   "tools/check_publication.py": {
-    "bytes": 6957,
-    "sha256": "35631031edcbfc76e3a16c2a8fedddfba88f115232d31d86eaba01dab7961884"
+    "bytes": 6973,
+    "sha256": "b013af4e3d04b3658aadd8808d63cdb9b192240114e6bed77495e936d7cd250d"
   }
 }
