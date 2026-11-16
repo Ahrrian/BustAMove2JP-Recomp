@@ -1,0 +1,80 @@
+# AVISOS DE ORIGEM / ORIGIN AND LICENSE NOTICES
+
+## PSXRecomp (arquivos em runtime-overrides/)
+
+Projeto original: https://github.com/RetroPortingToolKit/psxrecomp
+Origem anterior / redirecionamento: https://github.com/mstan/psxrecomp
+Commit de base preservado: b263b8552e5b8838b317f8921dfde8b6aca97904
+Copyright © 2026 Matthew Stanley e outros contribuidores, conforme
+os avisos dos arquivos originais e o histórico do projeto.
+Licença: PolyForm Noncommercial License 1.0.0
+Texto da licença: licenses/psxrecomp-LICENSE.txt
+
+Licença upstream no commit exato:
+https://github.com/RetroPortingToolKit/psxrecomp/blob/b263b8552e5b8838b317f8921dfde8b6aca97904/LICENSE
+
+Permissões adicionais do detentor dos direitos (não estendem direitos ao jogo):
+https://github.com/RetroPortingToolKit/psxrecomp/blob/b263b8552e5b8838b317f8921dfde8b6aca97904/PERMISSIONS.md
+
+Atribuições e avisos de terceiros no commit de referência:
+https://github.com/RetroPortingToolKit/psxrecomp/blob/b263b8552e5b8838b317f8921dfde8b6aca97904/THIRD_PARTY_ATTRIBUTION.md
+
+AVISO TERCEIRIZADO INCLUÍDO LOCALMENTE — xBR / Hyllian:
+O algoritmo xBR usado no filtro de texturas de
+`runtime-overrides/runtime/src/gpu_gl_renderer.c` é uma adaptação do
+trabalho de Hyllian. A origem upstream identifica esse trabalho como MIT,
+Copyright (C) 2011-2016 Hyllian - sergiogdb@gmail.com.
+O texto de copyright e a licença MIT correspondentes estão reproduzidos em
+`licenses/xBR-Hyllian-MIT.txt`, sem substituir a PolyForm aplicável ao
+código do PSXRecomp. Outros componentes de terceiros mantêm suas licenças.
+Para binários que incluam dependências do runtime, também devem ser
+repassados os avisos de cada dependência realmente distribuída/vinculada,
+inclusive os presentes em `runtime/licenses/` do framework fixado.
+
+`runtime-overrides/` contém versões completas modificadas de oito arquivos
+existentes no PSXRecomp, incluindo frame generation, renderizador OpenGL,
+render thread, main e salvamento, e um teste de frame generation.
+As alterações são voltadas a snapshot/apresentação, concorrência,
+tratamento de erros de savestate e interpolação experimental.
+Estes oito arquivos NÃO estão sob a licença MIT do assistente; a licença
+do framework e quaisquer licenças de terceiros continuam aplicáveis.
+Os avisos de copyright do código-fonte devem ser preservados.
+
+Os arquivos de dependências baixados pelo instalador não são incluídos
+neste pacote. Quando distribuir quaisquer binários construídos a partir
+do framework, confira também os avisos de terceiros efetivamente ligados
+(conforme os diretórios `runtime/licenses/` da versão fixada).
+
+## Componentes próprios do projeto e escopo da licença MIT
+
+A licença MIT presente em `licenses/assistant-MIT.txt` é oferecida para
+estes componentes do projeto, na medida em que os mantenedores tenham
+direitos para licenciá-los:
+
+- `source/Assistente.cs`, `source/prepare.py`, `source/build-assistant.cmd`;
+- `tools/check_publication.py`;
+- `.github/workflows/publication-check.yml`;
+- `.gitignore`, `.gitattributes`;
+- documentação original deste pacote (`README.md`, `LEIA-ME.txt`,
+  `RELEASE_CHECKLIST.md` e `VALIDACAO.txt`).
+
+Os arquivos foram desenvolvidos com auxílio de IA (OpenAI Codex/ChatGPT).
+A atribuição coletiva "BAM2 JP Recomp project contributors" não comprova
+originalidade absoluta nem dispensa a autorização de qualquer colaborador
+ou titular de componentes eventualmente reutilizados. O mantenedor pode
+substituí-la por sua identificação pública após confirmar titularidade.
+
+A MIT acima NÃO se aplica aos arquivos de `runtime-overrides/`, nem
+relicencia `licenses/`, bibliotecas de terceiros, material do jogo, nem
+seções ou dados do `template/` derivados de ferramentas ou análise do jogo.
+`template/CMakeLists.txt` e `template/game.toml` contêm configurações para
+uso com PSXRecomp; o arquivo `template/seeds/ghidra_funcs.txt` contém
+endereços obtidos da análise do jogo. Não se declara uma licença MIT
+independente para eventuais partes de terceiros nesses arquivos.
+
+## Jogo comercial
+
+O jogo, o código compilado ou recompilado a partir dele, assets, músicas,
+texturas, vídeos e disco NÃO são distribuídos neste pacote. Todos os
+direitos e marcas pertencem aos respectivos titulares. Nenhum uso desse
+material é licenciado por este projeto nem pela licença do PSXRecomp.

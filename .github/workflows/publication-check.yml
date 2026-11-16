@@ -1,0 +1,27 @@
+name: Conferir pacote público sem jogo
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verificar integridade, allowlist e arquivos rastreados
+        run: python tools/check_publication.py --tracked
+      - name: Verificar sintaxe da ferramenta de publicação e do preparador
+        run: |
+          python - <<'PY'
+          import ast
+          from pathlib import Path
+          for item in ('tools/check_publication.py', 'source/prepare.py'):
+              ast.parse(Path(item).read_text(encoding='utf-8'))
+              print('Sintaxe OK:', item)
+          PY

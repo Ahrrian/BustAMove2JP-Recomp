@@ -1,0 +1,15 @@
+Registro histórico dos testes da versão 0.1 original, conforme pacote
+fornecido pelo autor. Os itens abaixo NÃO foram repetidos para este pacote
+fonte-only revisado e não constituem certificação de release.
+
+- Assistente C# compilado anteriormente e autoteste de argumentos aprovado.
+- Interface aberta e layout conferido em máquina de desenvolvimento.
+- Geração e compilação a partir do disco japonês relatadas como concluídas.
+- Build local usou OpenBIOS, sem distribuir BIOS comercial.
+- Jogo pessoal abriu janela OpenGL e iniciou render thread/frame generation.
+- Não foi realizada validação de música inteira nem instalação Windows limpa.
+- Dependências e caches locais estavam presentes no ambiente de teste.
+
+Teste efetuado nesta revisão: auditoria estática dos arquivos públicos,
+integridade SHA-256 e verificações sintáticas Python. Não houve execução do
+jogo ou compilação Windows do assistente neste ambiente de preparação.

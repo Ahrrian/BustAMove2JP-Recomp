@@ -1,0 +1,47 @@
+BAM2 Recomp Test v0.1 — pacote público somente com código-fonte
+
+Este pacote contém o assistente e sua receita de compilação, configuração
+SLPM-86219, dados numéricos de seed, versões modificadas do PSXRecomp e
+avisos de licença. NÃO contém o jogo, ISO/BIN/CUE, conteúdo extraído, BIOS
+comercial, executável recompilado do jogo, imagens, músicas ou texturas.
+
+INÍCIO RÁPIDO (WINDOWS)
+Requisitos: Windows 64 bits, Python 3.11+, Git for Windows, internet,
+compilador/toolchain do PSXRecomp, espaço em disco e uma imagem CUE própria
+da edição japonesa SLPM-86219 com os BIN referenciados por ela.
+
+PowerShell na pasta do pacote:
+  py -3 .\source\prepare.py prepare --disc 'D:\MinhaColecao\BAM2JP.cue'
+  py -3 .\source\prepare.py play
+
+Se preferir o assistente gráfico, compile no Windows executando
+source\build-assistant.cmd; o arquivo Assistente_BAM2.exe será criado
+localmente. O compilador csc do .NET Framework 4.x precisa estar disponível.
+Selecione o CUE, confirme o aviso e clique em Preparar minha cópia.
+
+O assistente não converte CDs físicos em imagens, não fornece downloads do
+jogo e não suporta outras regiões. A compilação é pessoal e ocorre fora do
+pacote, geralmente em %LOCALAPPDATA%\BAM2RecompTest\v0.1.
+Nunca redistribua a pasta privada, o código gerado, os dados extraídos
+nem o executável pessoal. A imagem original permanece na pasta selecionada.
+
+LICENÇAS
+O PSXRecomp e seus arquivos modificados: PolyForm Noncommercial 1.0.0.
+Veja licenses/psxrecomp-LICENSE.txt e licenses/NOTICE.txt. A adaptação
+xBR credita Hyllian sob MIT em licenses/xBR-Hyllian-MIT.txt. A licença MIT
+dos componentes próprios do pacote (incluindo assistente e verificador) está
+em licenses/assistant-MIT.txt, com escopo detalhado no NOTICE. Ela NÃO
+abrange o runtime PSXRecomp, código ou dados de terceiros. Os componentes
+próprios foram preparados com auxílio de OpenAI Codex/ChatGPT.
+As dependências obtidas na instalação têm suas próprias licenças.
+Nenhum direito sobre o jogo original é concedido aqui.
+
+CONTROLE PRÉ-PUBLICAÇÃO
+  py -3 .\tools\check_publication.py
+Esse comando bloqueia arquivos não aprovados e verifica o inventário SHA-256.
+Consulte README.md e RELEASE_CHECKLIST.md antes de enviar ao GitHub.
+
+ESTADO DOS TESTES
+VALIDACAO.txt é um registro histórico fornecido com a versão 0.1.
+Não significa que a versão fonte-only tenha sido recompilada ou testada
+neste pacote, nem que exista validação de instalação Windows limpa.

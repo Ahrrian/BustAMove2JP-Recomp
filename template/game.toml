@@ -1,0 +1,52 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "BustAMove2JP"
+id = "SLPM-86219"
+players = 2
+exe = "disc/SLPM_862.19"
+disc = ""
+load_address = "0x80010000"
+entry_pc = "0x80035D98"
+text_size = "0x0004D000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Bust A Move 2 - Dance Tengoku Mix (Japan).bin"
+cue_name = "Bust A Move 2 - Dance Tengoku Mix (Japan).cue"
+boot_exe = "SLPM_862.19"
+known_sizes = [559035120]
+known_md5 = [
+  "e66918a9a2e5102464c60eab26e39169",
+]
+known_sha1 = [
+  "bb569316816b0e765adde10657e0cc7e89ade964",
+]
+known_crc32 = [
+  "5cdade58",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+window_title = "BustAMove2JP Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+internal_resolution = "display"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+multitap_analog = true
