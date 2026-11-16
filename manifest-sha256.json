@@ -1,7 +1,7 @@
 {
   ".gitattributes": {
-    "bytes": 172,
-    "sha256": "9b4892cdfc597aa4f749e06c759e4e40f6b58529e72174a4b34e40bb781c6a64"
+    "bytes": 191,
+    "sha256": "d8414160c7b8219c14a14e3b62a02250783c2de11dd7b0d24617685bd6f528b0"
   },
   ".github/workflows/publication-check.yml": {
     "bytes": 806,
@@ -28,8 +28,8 @@
     "sha256": "439c24c233eefd1841850d2fc1214366816ddd2d1e554b5d97749c2a828bddaa"
   },
   "framework.json": {
-    "bytes": 176,
-    "sha256": "315f161bf791967ac2877669afe49307a747656e3549999527d882871d5a7f41"
+    "bytes": 171,
+    "sha256": "a5fa571d64938590811063a76de3fad07d37ffa02aee4a0d8568ddd0c1d8d24a"
   },
   "licenses/NOTICE.txt": {
     "bytes": 4383,
@@ -40,52 +40,52 @@
     "sha256": "ca74c00c13c5d91a6df7fb85f58c9a0ff629668c868e0fcbabcaf27ea5250c20"
   },
   "licenses/psxrecomp-LICENSE.txt": {
-    "bytes": 4694,
-    "sha256": "75f5f2ae732cdc31adf8ad90a42ed4ed47476b3f27fcdf90de13e79d6788309d"
+    "bytes": 4563,
+    "sha256": "ffcca38841adb694b6f380647e15f17c446a4d1656fed51a1e2041d064c94cc8"
   },
   "licenses/xBR-Hyllian-MIT.txt": {
     "bytes": 1079,
     "sha256": "7ec7b76e8fe1b231193995711ce619d6a36958fe433b1ad9fd8feb3b28830d3a"
   },
   "runtime-overrides/runtime/include/frame_gen.h": {
-    "bytes": 13153,
-    "sha256": "e2c4df79c86fddfdd1297f278a09964d75c3e81c6408a1dbc7ddb4d052cddb65"
+    "bytes": 12914,
+    "sha256": "30061a54d3dcf8babb73f496db465fae726c125913778401ad3393cce29f3722"
   },
   "runtime-overrides/runtime/include/gpu_gl_renderer.h": {
-    "bytes": 39903,
-    "sha256": "389d6e51444839d0315271e7465718244ebfc74d51d28660128588066454e686"
+    "bytes": 39239,
+    "sha256": "4b2b51249f90a3320c873c6a7d56b7c2ff9604d813416a4e61da614cf7418eda"
   },
   "runtime-overrides/runtime/src/frame_gen.c": {
-    "bytes": 48104,
-    "sha256": "c6f1197998b1ac72e1e28ee1692155bd581d0de0a98ebfeacdd9645d0af51035"
+    "bytes": 47082,
+    "sha256": "49fd63c7d7a1f76288add5edc9168a08c33a130b5c885ecaa2b790e798b281db"
   },
   "runtime-overrides/runtime/src/gpu_gl_renderer.c": {
-    "bytes": 778887,
-    "sha256": "8654c4d7ebf939ad7fbb3ac45eadc8ebd83dd49e25f2b4116994ddf92ac1b5f2"
+    "bytes": 763368,
+    "sha256": "5aa26fb5479f1f6b6600a7467ab4865c8115226a06465941f9c602db0b09527a"
   },
   "runtime-overrides/runtime/src/main.cpp": {
-    "bytes": 1125278,
-    "sha256": "5893958aa249c2205a7e618548ea590e64f577c92a8d86a9bab6cb5eb3f32d37"
+    "bytes": 1102453,
+    "sha256": "0ba9b25ceb05d7bc44007b1affaadb2c08f4a15180e4480c4a6a03e38a1b3c15"
   },
   "runtime-overrides/runtime/src/render_thread.c": {
-    "bytes": 17641,
-    "sha256": "ca2e6f537f00ed9f097caf7f19513252755a45b7a724f67ddfd0432f90778e95"
+    "bytes": 17122,
+    "sha256": "471beaf3857eccaf2f6f7d36d40a39cea10418ccaaee9b2ca1badfc52d7fb1bb"
   },
   "runtime-overrides/runtime/src/savestate.c": {
-    "bytes": 43730,
-    "sha256": "64c5a4d75cc312d3590da9e8cb9cb7e102449e766807ac43fc50bd77a7511846"
+    "bytes": 42561,
+    "sha256": "a624906a58e7743afa8ca7d4b3950f67c08754e3525e25a4c6fc4ab41cd9edb6"
   },
   "runtime-overrides/runtime/tests/test_frame_gen.c": {
-    "bytes": 35578,
-    "sha256": "e0bb3067c463b14a0403950eddb1be36df5c91e78b2fc5129b6c6fa3d856cd70"
+    "bytes": 34886,
+    "sha256": "63319c11798583f24863c2a268c232e98c15fa1d8607508fb147359c7279d8e4"
   },
   "source/Assistente.cs": {
     "bytes": 5060,
     "sha256": "1a015d9415bb38ac5196ca60b9a538fceb35045db9ae6311e6ee707351386e80"
   },
   "source/build-assistant.cmd": {
-    "bytes": 249,
-    "sha256": "4c622e29cedab8693cbaa04d64aa5a8277c92462d52481bb4371fbc067147587"
+    "bytes": 253,
+    "sha256": "b7652a150f062b2e12a905e99f3a758e3948b3ab9e02428b022d322149d2962a"
   },
   "source/prepare.py": {
     "bytes": 5556,
@@ -96,12 +96,12 @@
     "sha256": "90602955a34f7cd3d5293625e8c87fb2ca5565f49fd4e6571641cfeb34114ed4"
   },
   "template/game.toml": {
-    "bytes": 1239,
-    "sha256": "0c05bd8c15fdd31589f5919f5806e53c148da5d786511894b0ecb7f46d377a70"
+    "bytes": 1187,
+    "sha256": "041631cd026fa711814ef9056db1408957f32dab93e57ee2b4abb4b89aab2d17"
   },
   "template/seeds/ghidra_funcs.txt": {
-    "bytes": 7056,
-    "sha256": "a94c2079d9164386cc97f4199d448ab880bbe763121e696317ef77d423d99c2b"
+    "bytes": 6468,
+    "sha256": "bc5bf53db557f3c78246c85ef019c78f454638cf3b471a9e428e40badd8a0b9b"
   },
   "tools/check_publication.py": {
     "bytes": 6957,
