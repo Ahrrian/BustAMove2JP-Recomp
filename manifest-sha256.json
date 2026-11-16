@@ -92,8 +92,8 @@
     "sha256": "b7652a150f062b2e12a905e99f3a758e3948b3ab9e02428b022d322149d2962a"
   },
   "source/prepare.py": {
-    "bytes": 5556,
-    "sha256": "a9cc0efef9afa9973f2577ab5dd963ac42da1240bcb9b0fa8d957c83fde75275"
+    "bytes": 9704,
+    "sha256": "87456075d0de9cbee5d2ded50bef871cf696f43c81b3e23cacaf3facc632d247"
   },
   "template/CMakeLists.txt": {
     "bytes": 1030,
