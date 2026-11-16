@@ -100,8 +100,8 @@
     "sha256": "90602955a34f7cd3d5293625e8c87fb2ca5565f49fd4e6571641cfeb34114ed4"
   },
   "template/game.toml": {
-    "bytes": 1187,
-    "sha256": "041631cd026fa711814ef9056db1408957f32dab93e57ee2b4abb4b89aab2d17"
+    "bytes": 1240,
+    "sha256": "bea3337e8bd08787795683bd10e2ea5edce7c6a6d8eb6177a662f80b60160c88"
   },
   "template/seeds/ghidra_funcs.txt": {
     "bytes": 6468,

@@ -46,7 +46,8 @@ internal_resolution = "display"
 
 [controller]
 default_mode = "digital"
-
+default_p1_device = "auto"
+default_p2_device = "auto"
 # Online mount gate: digests + track count + optional TOC fingerprint
 # (see docs/NETPLAY.md).
 multitap_analog = true
