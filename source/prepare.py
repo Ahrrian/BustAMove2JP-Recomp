@@ -16,6 +16,7 @@ PACKAGE = Path(__file__).resolve().parents[1]
 PIN = json.loads((PACKAGE / 'framework.json').read_text(encoding='utf-8'))
 
 UI_REPOSITORY = 'https://github.com/RetroPortingToolKit/recomp-ui.git'
+UI_COMMIT = 'd55bf8304c455dbc5773a000c919f6ba0a26d6bb'
 
 
 def run(args, cwd, env):
@@ -24,20 +25,39 @@ def run(args, cwd, env):
 
 
 def ensure_recomp_ui(workspace, env):
-    """Mantem a copia local existente; so clona quando ainda nao existe."""
+    """Usa a revisao validada do recomp-ui sem descartar alteracoes locais."""
     ui = workspace / 'recomp-ui'
-    if (ui / 'recomp_ui.cmake').is_file():
-        print('recomp-ui existente: ' + str(ui), flush=True)
-        return ui
-    if ui.exists():
-        raise RuntimeError(
-            'recomp-ui ja existe, mas falta recomp_ui.cmake: ' + str(ui)
-        )
-    run(['git', 'clone', UI_REPOSITORY, ui], workspace, env)
-    if not (ui / 'recomp_ui.cmake').is_file():
-        raise RuntimeError('Clone de recomp-ui incompleto: ' + str(ui))
-    return ui
 
+    if not ui.exists():
+        run(['git', 'clone', '--no-checkout', UI_REPOSITORY, ui], workspace, env)
+        run(['git', 'checkout', '--detach', UI_COMMIT], ui, env)
+
+    if not (ui / '.git').exists():
+        raise RuntimeError(
+            'recomp-ui existente nao e um repositorio Git: ' + str(ui)
+        )
+
+    head = subprocess.check_output(
+        ['git', 'rev-parse', 'HEAD'], cwd=ui, env=env, text=True
+    ).strip()
+
+    if head != UI_COMMIT:
+        dirty = subprocess.check_output(
+            ['git', 'status', '--porcelain'], cwd=ui, env=env, text=True
+        ).strip()
+        if dirty:
+            raise RuntimeError(
+                'recomp-ui possui alteracoes locais; nao sera substituido '
+                'automaticamente: ' + str(ui)
+            )
+        run(['git', 'fetch', 'origin', UI_COMMIT], ui, env)
+        run(['git', 'checkout', '--detach', UI_COMMIT], ui, env)
+
+    if not (ui / 'recomp_ui.cmake').is_file():
+        raise RuntimeError('recomp-ui incompleto: ' + str(ui))
+
+    print('recomp-ui fixado na revisao: ' + UI_COMMIT, flush=True)
+    return ui
 
 def enable_launcher_in_generated_cmake(workspace):
     """Corrige a linha FORCE gerada pela CLI antes de configurar o build.
